@@ -23,9 +23,9 @@ import graphviz
 from sklearn.tree import export_graphviz
 ```
 
-    C:\Users\medio\AppData\Local\Continuum\anaconda3\lib\site-packages\sklearn\cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+    /anaconda3/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
       "This module will be removed in 0.20.", DeprecationWarning)
-    
+
 
 Our dataset is stored in the file `salaries_final.csv`.  
 
@@ -438,7 +438,7 @@ plot_feature_importances(tree_clf)
 ```
 
 
-![png](output_22_0.png)
+![png](index_files/index_22_0.png)
 
 
 ### 2.3 Model performance
@@ -466,7 +466,7 @@ print(metrics.classification_report(target_test, pred))
     
     avg / total       0.81      0.82      0.81      8141
     
-    
+
 
 
 ```python
@@ -474,7 +474,7 @@ print("Testing Accuracy for Decision Tree Classifier: {:.4}%".format(accuracy_sc
 ```
 
     Testing Accuracy for Decision Tree Classifier: 82.04%
-    
+
 
 ## 3. Bagged trees
 
@@ -614,7 +614,7 @@ plot_feature_importances(forest)
 ```
 
 
-![png](output_46_0.png)
+![png](index_files/index_46_0.png)
 
 
 Note: "relationship" represents what this individual is relative to others. For example an
@@ -777,7 +777,7 @@ plot_feature_importances(gradboost)
 ```
 
 
-![png](output_68_0.png)
+![png](index_files/index_68_0.png)
 
 
 This isn't really an improvement compared to our Random forests. We told you that gradient boosting methods can generate excellent results, if you set your hyperparameters right! As you know, gradient descent is a delicate process and the learning rate should be set correctly. Let's have a look at what changing the learning rate does to our model.
@@ -840,7 +840,7 @@ plot_feature_importances(gradboost_2)
 ```
 
 
-![png](output_76_0.png)
+![png](index_files/index_76_0.png)
 
 
 The feature importances plot has changed drastically! This model is definitely more complex, as mentioned in the lecture.
@@ -906,7 +906,7 @@ plot_feature_importances(adaboost)
 ```
 
 
-![png](output_86_0.png)
+![png](index_files/index_86_0.png)
 
 
 Seems to be performing similarly to gradient boosting, even more focus on Age.
