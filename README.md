@@ -77,7 +77,7 @@ Now, split your data and target into training and testing sets using the appropr
 
 
 ```python
-data_train, data_test, target_train, target_test = None
+#data_train, data_test, target_train, target_test = None
 ```
 
 ## 2. Let's rebuild a "regular" tree as a baseline
@@ -108,15 +108,15 @@ That matrix isn't very helpful, but a visualization of the data it contains coul
 
 
 ```python
-def plot_feature_importances(model):
-    n_features = data_train.shape[1]
-    plt.figure(figsize=(8,8))
-    plt.barh(range(n_features), model.feature_importances_, align='center') 
-    plt.yticks(np.arange(n_features), data_train.columns.values) 
-    plt.xlabel("Feature importance")
-    plt.ylabel("Feature")
+# def plot_feature_importances(model):
+#     n_features = data_train.shape[1]
+#     plt.figure(figsize=(8,8))
+#     plt.barh(range(n_features), model.feature_importances_, align='center') 
+#     plt.yticks(np.arange(n_features), data_train.columns.values) 
+#     plt.xlabel("Feature importance")
+#     plt.ylabel("Feature")
 
-plot_feature_importances(tree_clf)
+# plot_feature_importances(tree_clf)
 ```
 
 ### 2.3 Model performance
@@ -131,13 +131,13 @@ from sklearn.metrics import accuracy_score
 
 ```python
 pred = None
-print(metrics.confusion_matrix(target_test, pred))
-print(metrics.classification_report(target_test, pred))
+# print(metrics.confusion_matrix(target_test, pred))
+# print(metrics.classification_report(target_test, pred))
 ```
 
 
 ```python
-print("Testing Accuracy for Decision Tree Classifier: {:.4}%".format(accuracy_score(target_test, pred) * 100))
+# print("Testing Accuracy for Decision Tree Classifier: {:.4}%".format(accuracy_score(target_test, pred) * 100))
 ```
 
 ## 3. Bagged trees
